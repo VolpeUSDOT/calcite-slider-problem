@@ -1,4 +1,4 @@
-import esriConfig from '@arcgis/core/config.js'
+// import esriConfig from '@arcgis/core/config.js'
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer'
 import MapView from '@arcgis/core/views/MapView'
 import Map from '@arcgis/core/Map.js'
@@ -30,7 +30,7 @@ let aLayer = new FeatureLayer({
 })
 
 const map = new Map({
-    basemap: 'arcgis-topographic',
+    // basemap: 'arcgis-topographic',
     layers: [aLayer]
 })
 
@@ -57,16 +57,16 @@ function setFilter(event: Event) {
 
     if (atMin && !atMax) {
         aLayerView.filter = { where: 'black_eqr  <= ' + currentMax }
-        console.log('at min, not at max')
+        // console.log('at min, not at max')
     } else if (!atMin && atMax) {
         aLayerView.filter = { where: 'black_eqr  >= ' + currentMin }
-        console.log('not at min, at max')
+        // console.log('not at min, at max')
     } else if (!atMin && !atMax) {
         aLayerView.filter = { where: 'black_eqr  >= ' + currentMin + ' and black_eqr  <= ' + currentMax }
-        console.log('neither at min nor at max')
+        // console.log('neither at min nor at max')
     } else {
         aLayerView.filter = null
-        console.log('at min and max')
+        // console.log('at min and max')
     }
 }
 
