@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+*.swp
+.vscode/
+*.local
+.vs
+package-lock.json
+.prettierrc
+my-api-key.txt

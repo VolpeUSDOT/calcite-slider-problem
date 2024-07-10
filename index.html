@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Slider Test</title>
+</head>
+
+<body>
+
+  <calcite-shell content-behind>
+
+    <calcite-shell-panel slot="panel-end" position="end" height-scale="l" display-mode="float">
+
+
+      <calcite-panel>
+
+        <div id="mySliderDiv">
+          <calcite-label id="bufferDistLabel">Specify Params</calcite-label>          
+          <calcite-slider id="mySlider" snap min=".1" min-value=".1" max-value="3" max="3" step=".1"></calcite-slider>
+        </div>
+          
+      </calcite-panel>
+
+    </calcite-shell-panel>
+
+    <div id="viewDiv"></div>
+
+  </calcite-shell>
+
+  <script type="module" src="/src/main.ts"></script>
+
+</body>
+
+</html>
